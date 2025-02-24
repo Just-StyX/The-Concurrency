@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class CustomLogger {
     private static final ConcurrentLinkedQueue<String> logQueue = new ConcurrentLinkedQueue<>();
     private static final Thread thread;
-    private static final String LOG_FILE = Paths.get("/home/lu/Documents/Workspace/concurrency/app/src/main/resources/server.log").toString();
+    private static final String LOG_FILE = Paths.get("/home/lu/Documents/Workspace/The-Concurrency/concurrency/app/src/main/resources/server.log").toString();
 
     static {
         LogTask task = new LogTask();

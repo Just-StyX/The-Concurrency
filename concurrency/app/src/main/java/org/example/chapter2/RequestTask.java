@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class RequestTask implements Runnable{
+public class RequestTask implements Runnable {
     private final Socket incoming;
 
     private RequestTask(Socket incoming) {
@@ -33,7 +33,7 @@ public class RequestTask implements Runnable{
                     String theResponse = commander.command();
                     cache.put(line, theResponse);
                     printWriter.println("Echo: " + theResponse);
-                    printWriter.println("Echo: " + ConcurrentStatusCommand.getInstance().execute());
+                    printWriter.println("Echo: " + ConcurrentStatus.getInstance().execute());
                     done = commander.isStopServer();
                 } else {
                     CustomLogger.sendMessage("Command " + line + " was found in the cache");
